@@ -1,0 +1,11 @@
+.sidebar {
+    display: flex;
+    flex-direction: column;
+}
+
+.compose-btn{
+    padding: 10px 20px !important;
+    margin: 10px !important;
+    max-width: 150px !important;
+    background-color: rgb(24, 143, 255) !important;
+}

@@ -1,0 +1,27 @@
+.emailBody {
+  padding: 0;
+  height: 7.5px;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  align-items: center;
+}
+
+.emailBody-left {
+  display: flex;
+}
+
+.emailBody-middle {
+  white-space: nowrap;
+  display: flex;
+  max-width: 400px;
+  overflow: hidden;
+}
+
+.emailBody-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.emailBody svg {
+  font-size: 12px;
+}

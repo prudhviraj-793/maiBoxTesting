@@ -1,0 +1,21 @@
+.emailMenu{
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 5px;
+}
+
+.emailMenu-right {
+    border-bottom: 1px solid rgb(251, 214, 214);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.emailMenu-left {
+    display: flex;
+    justify-content: left;
+    border-bottom: 1px solid rgb(251, 214, 214);
+}
+
+.emailMenu svg {
+    font-size: 16px;
+}
