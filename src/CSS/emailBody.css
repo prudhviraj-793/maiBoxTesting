@@ -34,3 +34,11 @@
   background-color: blue;
   border-radius: 50%;
 }
+
+.delete {
+  display: inline;
+}
+
+.delete svg {
+  font-size: 15px;
+}
