@@ -4,6 +4,7 @@
   display: grid;
   grid-template-columns: auto auto auto auto;
   align-items: center;
+  margin-bottom: 30px;
 }
 
 .emailBody-left {
@@ -24,4 +25,12 @@
 
 .emailBody svg {
   font-size: 12px;
+}
+
+.unRead {
+  align-self: center;
+  width: 8px;
+  height: 8px;
+  background-color: blue;
+  border-radius: 50%;
 }

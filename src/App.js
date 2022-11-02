@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import Compose from "./Components/Compose";
 import Welcome from "./Pages/Welcome";
 import { getMails, storeMail } from "./Store/actions";
+import Message from './Pages/Message.js'
 
 let isInitial = true;
 
@@ -27,6 +28,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Welcome />} />
       <Route path="/compose" element={<Compose />} />
+      <Route path="/message" element={<Message />} />
     </Routes>
   );
 }

@@ -11,10 +11,13 @@ function EmailList() {
       <EmailMenu />
       {allMails?.map((mail) => (
         <EmailBody
+          key={mail?.id}
+          id={mail?.id}
           user={mail?.to}
           subject={mail?.subject}
           body={mail?.body}
           time={mail?.time}
+          status={mail?.isMessageRead}
         />
       ))}
     </div>

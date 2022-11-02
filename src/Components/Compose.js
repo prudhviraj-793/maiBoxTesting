@@ -2,6 +2,7 @@ import { Fragment, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import TextEditor from "../Components/TextEditor";
 import { mailActions } from "../Store/mailSlice";
+import { messageActions } from "../Store/messagesSlice";
 
 function Compose() {
   const toRef = useRef();
@@ -17,13 +18,16 @@ function Compose() {
     const hrs = date.getHours()
     const mins = date.getMinutes()
     const mail = {
+      id: Math.random().toString(),
       to: enteredTo,
       subject: enteredSubject,
       body,
       time: `${hrs}:${mins}`,
-      isMailSent: true
+      isMailSent: true,
+      isMessageRead: false
     };
     dispatch(mailActions.sendMail(mail));
+    dispatch(messageActions.setUnreadMessages('increase'))
   }
   return (
     <Fragment>
