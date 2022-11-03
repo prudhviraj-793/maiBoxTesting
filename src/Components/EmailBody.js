@@ -11,7 +11,7 @@ import { updateMessageStatus } from "../API/api";
 
 function EmailBody(props) {
   const status = props.status;
-  const mails = useSelector(state => state.mail.mails)
+  const mails = useSelector((state) => state.mail.mails);
   const dispatch = useDispatch();
   const navigate = useNavigate();
   function clickHandler() {
@@ -21,19 +21,23 @@ function EmailBody(props) {
     navigate("/message");
   }
   async function deleteHandler(id) {
-    const newMails = [...mails]
-    newMails.forEach((mail,idx) => {
-      if(mail.id === id) {
-        newMails.splice(idx, 1)
+    const newMails = [...mails];
+    newMails.forEach((mail, idx) => {
+      if (mail.id === id) {
+        newMails.splice(idx, 1);
       }
-      return mail
-    })
-    await updateMessageStatus(newMails)
-    dispatch(mailActions.replaceMails(newMails))
+      return mail;
+    });
+    await updateMessageStatus(newMails);
+    dispatch(mailActions.replaceMails(newMails));
   }
   return (
     <Fragment>
-      <div onClick={clickHandler} className="emailBody">
+      <div
+        style={{ cursor: "pointer" }}
+        onClick={clickHandler}
+        className="emailBody"
+      >
         <div className="emailBody-left">
           <IconButton>
             <CheckBoxOutlineBlankIcon />
@@ -52,7 +56,7 @@ function EmailBody(props) {
         </div>
       </div>
       <div className="delete">
-        <IconButton onClick={() => deleteHandler(props.id)} >
+        <IconButton onClick={() => deleteHandler(props.id)}>
           <DeleteIcon />
         </IconButton>
       </div>

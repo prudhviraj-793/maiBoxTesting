@@ -1,13 +1,14 @@
 .sidebarOptions {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 150px;
-    height: 20px;
-    padding: 3px;
-    margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 150px;
+  height: 20px;
+  padding: 3px;
+  margin-left: 10px;
 }
 
 .SidebarOptions-active {
-    background-color: rgb(182, 212, 251);
+  background-color: rgb(182, 212, 251);
 }
+
